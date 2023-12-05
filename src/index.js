@@ -1,17 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, { cloneElement } from "react";
+import ReactDOM from "react-dom/client";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import { Container, Box } from "@mui/material";
+import Head from "./components/Container";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <Container maxWidth="lg">
+      <Box
+        sx={{
+          bgcolor: "#cfe8fc",
+          display: "flex",
+          flexDirection: "column",
+          height: "100vh",
+          alignItems: "center",
+        }}
+      >
+        <Head></Head>
+      </Box>
+    </Container>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
